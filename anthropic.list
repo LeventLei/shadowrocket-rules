@@ -1,0 +1,38 @@
+# ============================================================
+# ANTHROPIC / CLAUDE — STABILIZED PROXY RULESET
+# Based on: https://github.com/xiaolai/anthropic-claude-surge-rules-set
+# Plus: MetaCubeX geosite/anthropic (claude.dev / MCP hosts)
+# Changes vs upstream:
+#   - DROP DOMAIN,storage.googleapis.com (too broad; hijacks all GCS)
+#   - ADD DOMAIN-SUFFIX,claude.dev / claudemcpclient.com / claudemcpcontent.com
+#   - ADD DOMAIN,servd-anthropic-website.b-cdn.net
+#   - Deduplicate IPv4: keep only 160.79.104.0/21 (covers /23)
+# Format: Surge / Surfboard / Shadowrocket RULE-SET compatible
+# ============================================================
+
+# Core API & Services
+DOMAIN-SUFFIX,anthropic.com
+
+# Claude Web & CLI
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claude.dev
+
+# MCP & Ecosystem
+DOMAIN-SUFFIX,modelcontextprotocol.io
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+
+# Updates & Distribution (path-specific GCS omitted on purpose)
+DOMAIN,downloads.claude.ai
+
+# Feature Flags & Telemetry (narrow only)
+DOMAIN,cdn.growthbook.io
+DOMAIN,cdn.usefathom.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# Anthropic IP Ranges (AS399358)
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
