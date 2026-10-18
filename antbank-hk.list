@@ -1,0 +1,36 @@
+# Ant Bank (Hong Kong) - Shadowrocket RULE-SET
+# Updated: 2026-10-18
+# Source: user-supplied connection log; ABPPortal/2.1.7.1.
+# Usage: assign this RULE-SET to DIRECT in Shadowrocket.
+# Core hosts are bank-specific. Shared dependencies below are inferred
+# from the bank launch cluster at log time 09:26:57-09:27:20;
+# TCP records do not provide per-app attribution.
+# Shared services use exact hosts to limit effects on other apps.
+# Coverage is limited to observed activity; not every app flow was captured.
+
+# Bank domain (observed: raccoon.antbank.hk)
+DOMAIN-SUFFIX,antbank.hk
+
+# Bank-specific assets and native-app logging
+DOMAIN,antbank-cdn.marmot-cloud.com
+DOMAIN,ant-hkbank-linkd.cn-hongkong.log.aliyuncs.com
+
+# Shared Hong Kong mPaaS gateway, sync and telemetry
+DOMAIN,mgw.mpaas.cn-hongkong.aliyuncs.com
+DOMAIN,msync.mpaas.cn-hongkong.aliyuncs.com
+DOMAIN,mdap.mpaas.cn-hongkong.aliyuncs.com
+
+# Shared Marmot resources observed during launch
+DOMAIN,bailingual.marmot-cloud.com
+DOMAIN,sdk.marmot-cloud.com
+DOMAIN,cdn.marmot-cloud.com
+
+# Shared identity-verification device services
+DOMAIN,cloudauth-device.aliyuncs.com
+DOMAIN,cloudauth-device.ap-southeast-1.aliyuncs.com
+
+# Shared Alipay resources and telemetry observed during launch
+DOMAIN,render.alipay.com
+DOMAIN,gw.alipayobjects.com
+DOMAIN,collect.alipay.com
+DOMAIN,imdap-sea.alipay.com
