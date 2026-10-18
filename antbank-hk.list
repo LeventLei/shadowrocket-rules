@@ -34,3 +34,8 @@ DOMAIN,render.alipay.com
 DOMAIN,gw.alipayobjects.com
 DOMAIN,collect.alipay.com
 DOMAIN,imdap-sea.alipay.com
+
+# Shared Alipay logging: rejected in the second connection log.
+# Allow for troubleshooting; its role in login failure is unconfirmed.
+# Place this RULE-SET before blocking rules in the parent configuration.
+DOMAIN,loggw.alipay.com
