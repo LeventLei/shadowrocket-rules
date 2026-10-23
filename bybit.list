@@ -1,0 +1,13 @@
+# NAME: Bybit
+# Format: Shadowrocket RULE-SET
+# Source: user-provided Shadowrocket screenshot
+# DOMAIN-KEYWORD matches any hostname containing bybit.
+# TOTAL: 7
+
+DOMAIN-SUFFIX,bybitapp.com
+DOMAIN-SUFFIX,bybits.com
+DOMAIN-SUFFIX,bybit-exchange.com
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit.global
+DOMAIN-SUFFIX,bybit.io
+DOMAIN-KEYWORD,bybit
