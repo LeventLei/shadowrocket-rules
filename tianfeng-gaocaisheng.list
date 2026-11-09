@@ -1,0 +1,12 @@
+# NAME: Tianfeng Gao Cai Sheng
+# Format: Shadowrocket RULE-SET
+# Source: Shadowrocket proxy log, 2026-11-09
+# Observed Tianfeng Securities hostnames; shared third-party domains excluded.
+# TOTAL: 6
+
+DOMAIN,gcszh.tfzq.com
+DOMAIN,action.tfzq.com
+DOMAIN,gcsapp.tfzq.com
+DOMAIN,message.tfzq.com
+DOMAIN,jiyangcs.tfzq.com
+DOMAIN,filedownload2.tfzq.com
